@@ -1,6 +1,6 @@
 # get-wx A very simple open meteo weather parser written in golang
 
-wx is a aeronautical term fr weather or weather report.
+wx is a aeronautical term for weather or weather report.
 
 ## Prerequisites
 
