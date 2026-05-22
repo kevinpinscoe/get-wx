@@ -21,6 +21,31 @@ archives:
     name_template: "get-wx-{{ .Os }}-{{ .Arch }}"
     format: binary
 
+nfpms:
+  - id: get-wx-packages
+    package_name: get-wx
+    vendor: Kevin P. Inscoe
+    homepage: https://github.com/kevinpinscoe/get-wx
+    maintainer: Kevin P. Inscoe <kevin.inscoe@gmail.com>
+    description: Eastern Tennessee weather forecast fetcher
+    license: MIT
+    formats: [deb, rpm]
+    bindir: /usr/bin
+    builds: [get-wx]
+
+brews:
+  - name: get-wx
+    repository:
+      owner: kevinpinscoe
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    directory: Formula
+    homepage: https://github.com/kevinpinscoe/get-wx
+    description: Eastern Tennessee weather forecast fetcher
+    license: MIT
+    test: |
+      system "#{bin}/get-wx", "--help"
+
 checksum:
   name_template: "checksums.txt"
 
