@@ -10,6 +10,39 @@ wx is a aeronautical term for weather or weather report.
 
 ## Install
 
+### Package managers
+
+#### Homebrew (macOS/Linux)
+
+```bash
+brew tap kevinpinscoe/homebrew-tap
+brew install get-wx
+```
+
+#### APT (Debian/Ubuntu)
+
+```bash
+curl -sL https://kevinpinscoe.github.io/apt/gpg.key \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/kevinpinscoe.gpg
+
+echo "deb [signed-by=/etc/apt/keyrings/kevinpinscoe.gpg] \
+  https://kevinpinscoe.github.io/apt stable main" \
+  | sudo tee /etc/apt/sources.list.d/kevinpinscoe.list
+
+sudo apt update
+sudo apt install get-wx
+```
+
+#### DNF (Fedora/RHEL)
+
+```bash
+sudo curl -fsSL https://kevinpinscoe.github.io/rpm/kevinpinscoe.repo \
+  -o /etc/yum.repos.d/kevinpinscoe.repo
+sudo dnf install get-wx
+```
+
+### Compile from source
+
 * Clone this repo (git clone)
 * run make
 * run make install (installs to your home directory under the bin subdirectory). You can edit Makefile to change the location of the install. Become sudo if using a system location.
