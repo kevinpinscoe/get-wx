@@ -17,9 +17,9 @@ builds:
 
 archives:
   - id: get-wx-archive
-    builds: [get-wx]
+    ids: [get-wx]
     name_template: "get-wx-{{ .Os }}-{{ .Arch }}"
-    format: binary
+    formats: [binary]
 
 nfpms:
   - id: get-wx-packages
@@ -31,7 +31,7 @@ nfpms:
     license: MIT
     formats: [deb, rpm]
     bindir: /usr/bin
-    builds: [get-wx]
+    ids: [get-wx]
 
 brews:
   - name: get-wx
