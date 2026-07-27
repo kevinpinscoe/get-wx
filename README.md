@@ -16,7 +16,15 @@ wx is a aeronautical term for weather or weather report.
 
 ```bash
 brew tap kevinpinscoe/homebrew-tap
-brew install get-wx
+brew install --cask get-wx
+```
+
+Upgrading from a release before v1.0.3? This tool shipped as a formula until
+then. Remove the old one first — a formula and a cask of the same name cannot
+coexist:
+
+```bash
+brew uninstall get-wx
 ```
 
 #### APT (Debian/Ubuntu)

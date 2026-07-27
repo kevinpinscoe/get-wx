@@ -33,18 +33,20 @@ nfpms:
     bindir: /usr/bin
     ids: [get-wx]
 
-brews:
+# `brews:` was deprecated in GoReleaser v2.10 and is slated for removal in
+# v2.16. Casks cover Linux as well as macOS since Homebrew/brew#19121 added
+# Linux binary support, so nothing is lost by moving off the formula.
+# There is no cask equivalent of a formula `test do` block.
+homebrew_casks:
   - name: get-wx
     repository:
       owner: kevinpinscoe
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
-    directory: Formula
+    directory: Casks
     homepage: https://github.com/kevinpinscoe/get-wx
     description: Eastern Tennessee weather forecast fetcher
     license: MIT
-    test: |
-      system "#{bin}/get-wx", "--help"
 
 checksum:
   name_template: "checksums.txt"
