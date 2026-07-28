@@ -60,3 +60,13 @@ sudo dnf install get-wx
 * First determine your latitude and longitude in decimal degrees. If you don't know yours visit Google Maps and right click on your location. For privacy You will only require two digits nn.nn or -nn.nn. 
 * On first run you will be prompted for your latitude and longitude. Enter them as decimal degrees and not degrees, minuted, seconds or any other format or the retrieve will not work. 
 * A config file will be saved in your home directory under the .config subdirectory named get-wx.
+
+## Security
+
+Release artifacts are cosign-signed and each release publishes an SPDX SBOM.
+See [SECURITY.md](SECURITY.md) for verification steps and how to report a
+vulnerability.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
